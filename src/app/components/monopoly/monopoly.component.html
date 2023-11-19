@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <p>{{ownedCards.length}} cards owned</p>
+        </div>
+        <div class="col-6">
+            <p>Mortaged: {{totalMortaged}}</p>
+        </div>
+        <div class="col-6">
+            <p>Unmortaged worth ${{unmortagedWorth}}</p>
+        </div>
+        <div class="col-6">
+            <p>Mortaged worth ${{mortagedWorth}}</p>
+        </div>
+        <div class="col-6">
+            <p>Raw worth ${{totalRawWorth}}</p>
+        </div>
+        <div class="col-6">
+            <p>Current worth: ${{currentWorth}}</p>
+            <p>{{(Math.round((currentUnmortaged / currentWorth) * 100) * 100) / 100}}% unmortaged
+                ${{currentUnmortaged}}, {{(Math.round((currentMortaged / currentWorth) * 100) * 100) / 100}}% mortaged
+                ${{currentMortaged}}</p>
+        </div>
+        <div *ngFor="let card of ownedCards; let i = index" class="col-sm-6 col-lg-4 col-xl-3 card">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12">
+
+                        <ng-template [ngIf]="!card.mortaged" [ngIfElse]="mortagedCard">
+                            <img src="{{card.imageUrl}}_front.png" class="card rounded" alt="...">
+                        </ng-template>
+                        <ng-template #mortagedCard>
+                            <img src="{{card.imageUrl}}_back.png" class="card rounded" alt="...">
+                        </ng-template>
+
+                    </div>
+                    <div class="col-5">
+                        <p><b>{{card.name}}</b></p>
+                    </div>
+                    <div class="col-2" style="background-color: {{card.color}};">
+                    </div>
+                    <div class="col-5">
+                        <ng-template [ngIf]="!card.mortaged" [ngIfElse]="mortageCost">
+                            <p>${{card.worth}}</p>
+                        </ng-template>
+                        <ng-template #mortageCost>
+                            <p class="text-danger">${{card.worth / 2}}</p>
+                        </ng-template>
+                    </div>
+                    <button (click)="deleteCard(card)" class="btn btn-danger delete col-6">x</button>
+                    <ng-template [ngIf]="!card.mortaged" [ngIfElse]="mortageButton">
+                        <button (click)="toggleMortageCard(card)" class="btn btn-danger delete col-6">Mortage</button>
+                    </ng-template>
+                    <ng-template #mortageButton>
+                        <button (click)="toggleMortageCard(card)"
+                            class="btn btn-success delete col-6">Unmortage</button>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="searchbar">
+
+    <div *ngIf="lastSearch" class="popup" id="popup">
+        <div class="container">
+
+            <div class="row">
+                <div (click)="selectCard(card)" *ngFor="let card of filteredCards" class="col-6 col-xl-2">
+                    <p>
+                        <a>
+                            {{ card.name }}
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="text" placeholder="Enter card name" [(ngModel)]="lastSearch" (input)="filterCards()">
+
+</div>

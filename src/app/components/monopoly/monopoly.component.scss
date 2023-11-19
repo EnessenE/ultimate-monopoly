@@ -1,0 +1,38 @@
+.card {
+    background-color: white;
+    color: black;
+    padding: 0px;
+}
+
+.card img {
+    max-height: 100%;
+    object-fit: contain;
+    margin-top: 5%;
+    width: 100%
+}
+
+.popup {
+    background: #d1005c;
+    padding: 20px;
+    color: #fff;
+    min-height: 200px;
+    position: relative;
+    bottom: 100%;
+    /*remove top and replace with bottom*/
+    margin-top: -20px;
+    /*minus the size of your arrow - optional*/
+    width: 100%;
+    z-index: 100;
+}
+
+.searchbar {
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    bottom: 0;
+    width: 100%
+}
+
+.searchbar input {
+    width: 100%;
+}
