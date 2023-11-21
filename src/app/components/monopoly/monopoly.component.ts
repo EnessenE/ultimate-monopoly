@@ -13,7 +13,7 @@ export class MonopolyComponent implements OnInit {
   ownedCards: Card[] = new Array();
   allCards: Card[] = [];
   filteredCards: Card[] = [];
-  lastSearch: string = "leid";
+  lastSearch: string = "street";
 
 
   mortagedWorth: number = 0;
@@ -38,6 +38,7 @@ export class MonopolyComponent implements OnInit {
     });
     this.recalculateCards();
     this.filterCards();
+    this.ownedCards = JSON.parse(localStorage.getItem('currentHand') ?? '[]');
   }
 
   ngOnInit(): void {
@@ -78,6 +79,7 @@ export class MonopolyComponent implements OnInit {
     }
     this.filterCards();
     this.recalculateCards();
+    this.saveCurrentHand();
   }
 
   selectCard(card: Card) {
@@ -86,6 +88,14 @@ export class MonopolyComponent implements OnInit {
     this.lastSearch = "";
     this.filterCards();
     this.recalculateCards();
+
+    this.saveCurrentHand();
+  }
+
+  saveCurrentHand() {
+    //basic as hell
+    console.log("saving");
+    localStorage.setItem('currentHand', JSON.stringify(this.ownedCards));
   }
 
   filterCards(): void {
@@ -144,5 +154,6 @@ export class MonopolyComponent implements OnInit {
   toggleMortageCard(card: Card): void {
     card.mortaged = !card.mortaged;
     this.recalculateCards();
+    this.saveCurrentHand();
   }
 }
