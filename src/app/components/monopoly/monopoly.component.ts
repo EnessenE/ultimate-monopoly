@@ -13,7 +13,7 @@ export class MonopolyComponent implements OnInit {
   ownedCards: Card[] = new Array();
   allCards: Card[] = [];
   filteredCards: Card[] = [];
-  lastSearch: string = "street";
+  lastSearch: string = "";
 
 
   mortagedWorth: number = 0;
@@ -36,9 +36,9 @@ export class MonopolyComponent implements OnInit {
       this.allCards.push(newCard);
 
     });
-    this.recalculateCards();
     this.filterCards();
     this.ownedCards = JSON.parse(localStorage.getItem('currentHand') ?? '[]');
+    this.recalculateCards();
   }
 
   ngOnInit(): void {

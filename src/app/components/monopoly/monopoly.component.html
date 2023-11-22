@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mainbox">
     <div class="row">
         <div class="col-6">
             <p>{{ownedCards.length}} cards owned</p>
@@ -22,7 +22,7 @@
                 ${{currentUnmortaged}}, {{(Math.round((currentMortaged / currentWorth) * 100) * 100) / 100}}% mortaged
                 ${{currentMortaged}}</p>
         </div>
-        <div *ngFor="let card of ownedCards; let i = index" class="col-sm-6 col-lg-4 col-xl-3 card">
+        <div *ngFor="let card of ownedCards; let i = index" class="col-6 col-sm-6 col-lg-4 col-xl-3 card">
             <div class="container">
 
                 <div class="row">
@@ -36,26 +36,26 @@
                         </ng-template>
 
                     </div>
-                    <div class="col-5">
-                        <p><b>{{card.name}}</b></p>
+                    <div class="col-12 colorline" style="background-color: {{card.color}};">
                     </div>
-                    <div class="col-2" style="background-color: {{card.color}};">
+                    <div class="col-12 col-sm-8">
+                        <p class="text-wrap"><b>{{card.name}}</b></p>
                     </div>
-                    <div class="col-5">
+                    <div class="col-12 col-sm-4">
                         <ng-template [ngIf]="!card.mortaged" [ngIfElse]="mortageCost">
                             <p>${{card.worth}}</p>
                         </ng-template>
                         <ng-template #mortageCost>
-                            <p class="text-danger">${{card.worth / 2}}</p>
+                            <p class="text-danger text-wrap">${{card.worth / 2}}</p>
                         </ng-template>
                     </div>
-                    <button (click)="deleteCard(card)" class="btn btn-danger delete col-6">x</button>
+                    <button (click)="deleteCard(card)" class="btn btn-danger delete col-2">x</button>
                     <ng-template [ngIf]="!card.mortaged" [ngIfElse]="mortageButton">
-                        <button (click)="toggleMortageCard(card)" class="btn btn-danger delete col-6">Mortage</button>
+                        <button (click)="toggleMortageCard(card)" class="btn btn-danger delete col-10">Mortage</button>
                     </ng-template>
                     <ng-template #mortageButton>
                         <button (click)="toggleMortageCard(card)"
-                            class="btn btn-success delete col-6">Unmortage</button>
+                            class="btn btn-success delete col-10 text-truncate">Unmortage</button>
                     </ng-template>
                 </div>
             </div>
