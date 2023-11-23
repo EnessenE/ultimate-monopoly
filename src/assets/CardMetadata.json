@@ -1,0 +1,773 @@
+{
+    "abbey road": {
+        "Cost": 220
+    },
+    "academy street": {
+        "Cost": 60
+    },
+    "al-khail road": {
+        "Cost": 590
+    },
+    "al-seef street": {
+        "Cost": 610
+    },
+    "alarm company": {
+        "Cost": 150
+    },
+    "albert street": {
+        "Cost": 200
+    },
+    "andrew young intl boulevard": {
+        "Cost": 210
+    },
+    "arbat street": {
+        "Cost": 220
+    },
+    "arctic avenue": {
+        "Cost": 80
+    },
+    "arkansas avenue": {
+        "Cost": 240
+    },
+    "atlantic avenue": {
+        "Cost": 260
+    },
+    "atlantic railroad": {
+        "Cost": 200
+    },
+    "avenida da liberdade": {
+        "Cost": 410
+    },
+    "avenida de asturias": {
+        "Cost": 280
+    },
+    "avenida insurgentes": {
+        "Cost": 70
+    },
+    "avenida madero": {
+        "Cost": 40
+    },
+    "avenida marginal": {
+        "Cost": 390
+    },
+    "avenida mexico": {
+        "Cost": 40
+    },
+    "avenue de la costa": {
+        "Cost": 670
+    },
+    "avenue de la madone": {
+        "Cost": 660
+    },
+    "avenue des champs-elysees": {
+        "Cost": 470
+    },
+    "avenue foch": {
+        "Cost": 470
+    },
+    "avenue henri-martin": {
+        "Cost": 440
+    },
+    "avenue louise": {
+        "Cost": 530
+    },
+    "avenue princesse grace": {
+        "Cost": 700
+    },
+    "b & o railroad": {
+        "Cost": 200
+    },
+    "bahnhofstrasse": {
+        "Cost": 550
+    },
+    "baltic avenue": {
+        "Cost": 60
+    },
+    "bayview terrace": {
+        "Cost": 350
+    },
+    "beacon street": {
+        "Cost": 330
+    },
+    "belvedere place": {
+        "Cost": 650
+    },
+    "biscayne avenue": {
+        "Cost": 150
+    },
+    "black & white cab company": {
+        "Cost": 300
+    },
+    "blue monorail": {
+        "Cost": 600
+    },
+    "boardwalk": {
+        "Cost": 400
+    },
+    "bogstadveien": {
+        "Cost": 200
+    },
+    "bourbon street": {
+        "Cost": 120
+    },
+    "boylston street": {
+        "Cost": 330
+    },
+    "brivibas street": {
+        "Cost": 150
+    },
+    "broad street": {
+        "Cost": 390
+    },
+    "bunda street": {
+        "Cost": 390
+    },
+    "burkliplatz": {
+        "Cost": 520
+    },
+    "cable company": {
+        "Cost": 150
+    },
+    "california avenue": {
+        "Cost": 280
+    },
+    "calle de alcala": {
+        "Cost": 280
+    },
+    "calle de serrano": {
+        "Cost": 310
+    },
+    "calle genova": {
+        "Cost": 40
+    },
+    "canal street": {
+        "Cost": 90
+    },
+    "cass avenue": {
+        "Cost": 30
+    },
+    "cell block a": {
+        "Cost": 250
+    },
+    "cell block b": {
+        "Cost": 250
+    },
+    "cell block c": {
+        "Cost": 250
+    },
+    "cell block d": {
+        "Cost": 250
+    },
+    "cell phone company": {
+        "Cost": 150
+    },
+    "central market": {
+        "Cost": 170
+    },
+    "central park": {
+        "Cost": 500
+    },
+    "central railroad": {
+        "Cost": 200
+    },
+    "chaussee dixelles": {
+        "Cost": 520
+    },
+    "chausseestrasse": {
+        "Cost": 300
+    },
+    "checker cab company": {
+        "Cost": 300
+    },
+    "chelsea harbor": {
+        "Cost": 400
+    },
+    "church street": {
+        "Cost": 60
+    },
+    "compost center": {
+        "Cost": 150
+    },
+    "connecticut avenue": {
+        "Cost": 120
+    },
+    "cullen boulevard": {
+        "Cost": 180
+    },
+    "decatur street": {
+        "Cost": 240
+    },
+    "dekalb avenue": {
+        "Cost": 210
+    },
+    "delancey street": {
+        "Cost": 390
+    },
+    "delta basin": {
+        "Cost": 400
+    },
+    "downing street": {
+        "Cost": 220
+    },
+    "east temple": {
+        "Cost": 330
+    },
+    "ebertstrasse": {
+        "Cost": 300
+    },
+    "eight mile road": {
+        "Cost": 30
+    },
+    "eixo monumental": {
+        "Cost": 60
+    },
+    "eje central": {
+        "Cost": 70
+    },
+    "electric company": {
+        "Cost": 150
+    },
+    "elizabetes street": {
+        "Cost": 160
+    },
+    "emirates road": {
+        "Cost": 580
+    },
+    "esplanade avenue": {
+        "Cost": 90
+    },
+    "fenway park": {
+        "Cost": 380
+    },
+    "fifth avenue": {
+        "Cost": 430
+    },
+    "fishermans wharf": {
+        "Cost": 250
+    },
+    "five points": {
+        "Cost": 450
+    },
+    "florida avenue": {
+        "Cost": 130
+    },
+    "galveston street": {
+        "Cost": 150
+    },
+    "garema place": {
+        "Cost": 360
+    },
+    "gas company": {
+        "Cost": 150
+    },
+    "gator bowl boulevard": {
+        "Cost": 600
+    },
+    "gianicolo promenade": {
+        "Cost": 140
+    },
+    "ginza": {
+        "Cost": 470
+    },
+    "gotgatan": {
+        "Cost": 380
+    },
+    "gran via": {
+        "Cost": 310
+    },
+    "grass street": {
+        "Cost": 320
+    },
+    "gratiot avenue": {
+        "Cost": 60
+    },
+    "green monorail": {
+        "Cost": 600
+    },
+    "hartsfield jackson airport": {
+        "Cost": 500
+    },
+    "herengracht": {
+        "Cost": 460
+    },
+    "high street": {
+        "Cost": 100
+    },
+    "illinois avenue": {
+        "Cost": 240
+    },
+    "independence avenue": {
+        "Cost": 80
+    },
+    "indiana avenue": {
+        "Cost": 220
+    },
+    "internet service provider": {
+        "Cost": 150
+    },
+    "jackson square": {
+        "Cost": 90
+    },
+    "jersey central": {
+        "Cost": 200
+    },
+    "john exum parkway": {
+        "Cost": 300
+    },
+    "john f. kennedy airport": {
+        "Cost": 500
+    },
+    "jumeirah street": {
+        "Cost": 620
+    },
+    "kalku street": {
+        "Cost": 190
+    },
+    "kalverstraat": {
+        "Cost": 480
+    },
+    "karl johans gate": {
+        "Cost": 230
+    },
+    "katy freeway": {
+        "Cost": 150
+    },
+    "keizergracht": {
+        "Cost": 490
+    },
+    "kentucky avenue": {
+        "Cost": 220
+    },
+    "kings avenue": {
+        "Cost": 390
+    },
+    "kirby drive": {
+        "Cost": 180
+    },
+    "kirkevein": {
+        "Cost": 200
+    },
+    "kohlmarkt": {
+        "Cost": 270
+    },
+    "kopmangatan": {
+        "Cost": 420
+    },
+    "kurfurstendamm": {
+        "Cost": 340
+    },
+    "lago norte": {
+        "Cost": 20
+    },
+    "lago sul": {
+        "Cost": 50
+    },
+    "lake shore drive": {
+        "Cost": 270
+    },
+    "larochegasse": {
+        "Cost": 240
+    },
+    "laura street": {
+        "Cost": 450
+    },
+    "leidsestraat": {
+        "Cost": 440
+    },
+    "limmatquai": {
+        "Cost": 520
+    },
+    "lombard street": {
+        "Cost": 210
+    },
+    "london circuit": {
+        "Cost": 360
+    },
+    "los angeles intl airport": {
+        "Cost": 500
+    },
+    "madison avenue": {
+        "Cost": 430
+    },
+    "magazine street": {
+        "Cost": 120
+    },
+    "majura road": {
+        "Cost": 360
+    },
+    "market lane": {
+        "Cost": 300
+    },
+    "market street": {
+        "Cost": 420
+    },
+    "marsa street": {
+        "Cost": 120
+    },
+    "marvin gardens": {
+        "Cost": 280
+    },
+    "maryland avenue": {
+        "Cost": 160
+    },
+    "massachusetts avenue": {
+        "Cost": 120
+    },
+    "mayfair": {
+        "Cost": 260
+    },
+    "mcfarlane street": {
+        "Cost": 330
+    },
+    "mediterranean avenue": {
+        "Cost": 60
+    },
+    "miami avenue": {
+        "Cost": 130
+    },
+    "michigan avenue": {
+        "Cost": 300
+    },
+    "miodowa street": {
+        "Cost": 120
+    },
+    "mosaic street": {
+        "Cost": 400
+    },
+    "mulholland drive": {
+        "Cost": 590
+    },
+    "new jersey avenue": {
+        "Cost": 200
+    },
+    "new york avenue": {
+        "Cost": 200
+    },
+    "newbury street": {
+        "Cost": 380
+    },
+    "north carolina avenue": {
+        "Cost": 300
+    },
+    "north temple": {
+        "Cost": 360
+    },
+    "nowy swiat street": {
+        "Cost": 150
+    },
+    "nyamiha street": {
+        "Cost": 110
+    },
+    "nytorget square": {
+        "Cost": 420
+    },
+    "ocean drive": {
+        "Cost": 150
+    },
+    "ohare airport": {
+        "Cost": 500
+    },
+    "ohio avenue": {
+        "Cost": 370
+    },
+    "omotesando avenue": {
+        "Cost": 400
+    },
+    "oriental avenue": {
+        "Cost": 100
+    },
+    "oriental parade": {
+        "Cost": 310
+    },
+    "oxford street": {
+        "Cost": 260
+    },
+    "pacific avenue": {
+        "Cost": 300
+    },
+    "paradeplatz": {
+        "Cost": 550
+    },
+    "park place": {
+        "Cost": 350
+    },
+    "park way": {
+        "Cost": 40
+    },
+    "pasadena boulevard": {
+        "Cost": 250
+    },
+    "paseo del prado": {
+        "Cost": 280
+    },
+    "peachtree street": {
+        "Cost": 240
+    },
+    "pennsylvania avenue": {
+        "Cost": 320
+    },
+    "pennsylvania railroad": {
+        "Cost": 200
+    },
+    "philadelphia railway": {
+        "Cost": 200
+    },
+    "piazza del popolo": {
+        "Cost": 180
+    },
+    "piedmont park": {
+        "Cost": 210
+    },
+    "pilestredet": {
+        "Cost": 200
+    },
+    "pionerskaya street": {
+        "Cost": 100
+    },
+    "place du casino": {
+        "Cost": 690
+    },
+    "ponte vedra boulevard": {
+        "Cost": 600
+    },
+    "postal service": {
+        "Cost": 150
+    },
+    "potsdam square": {
+        "Cost": 300
+    },
+    "prinsengracht": {
+        "Cost": 470
+    },
+    "pritzker pavilion": {
+        "Cost": 270
+    },
+    "randolph street": {
+        "Cost": 270
+    },
+    "reading railroad": {
+        "Cost": 200
+    },
+    "recycling center": {
+        "Cost": 150
+    },
+    "red monorail": {
+        "Cost": 600
+    },
+    "red square": {
+        "Cost": 290
+    },
+    "rennweg": {
+        "Cost": 520
+    },
+    "ringstrasse": {
+        "Cost": 250
+    },
+    "riverside drive": {
+        "Cost": 450
+    },
+    "roan street": {
+        "Cost": 300
+    },
+    "rodeo drive": {
+        "Cost": 510
+    },
+    "rua antonio saldanha": {
+        "Cost": 370
+    },
+    "rua do salitre": {
+        "Cost": 420
+    },
+    "rua garrett": {
+        "Cost": 380
+    },
+    "rue de la paix": {
+        "Cost": 440
+    },
+    "rue du buisson": {
+        "Cost": 550
+    },
+    "rue du marche aux fromages": {
+        "Cost": 510
+    },
+    "rue lafayette": {
+        "Cost": 580
+    },
+    "rue neuve": {
+        "Cost": 560
+    },
+    "satellite television provider": {
+        "Cost": 150
+    },
+    "schreiberweg": {
+        "Cost": 220
+    },
+    "seashore lines": {
+        "Cost": 200
+    },
+    "setor noroeste": {
+        "Cost": 10
+    },
+    "sewage system": {
+        "Cost": 150
+    },
+    "sheikh zayed road": {
+        "Cost": 640
+    },
+    "sherbrooke street": {
+        "Cost": 580
+    },
+    "shibuya crossing": {
+        "Cost": 470
+    },
+    "short line": {
+        "Cost": 200
+    },
+    "snug harbor": {
+        "Cost": 400
+    },
+    "south carolina avenue": {
+        "Cost": 320
+    },
+    "south street": {
+        "Cost": 390
+    },
+    "south temple": {
+        "Cost": 330
+    },
+    "state marina": {
+        "Cost": 400
+    },
+    "states avenue": {
+        "Cost": 140
+    },
+    "strandvagen": {
+        "Cost": 460
+    },
+    "street charles place": {
+        "Cost": 140
+    },
+    "street james place": {
+        "Cost": 180
+    },
+    "summit circle": {
+        "Cost": 650
+    },
+    "telegraph road": {
+        "Cost": 60
+    },
+    "telephone company": {
+        "Cost": 150
+    },
+    "temple square": {
+        "Cost": 360
+    },
+    "tennessee avenue": {
+        "Cost": 180
+    },
+    "the boulevard": {
+        "Cost": 580
+    },
+    "the embarcadero": {
+        "Cost": 210
+    },
+    "theatre square": {
+        "Cost": 290
+    },
+    "trafalgar square": {
+        "Cost": 220
+    },
+    "trash collector": {
+        "Cost": 150
+    },
+    "tuchlauben": {
+        "Cost": 260
+    },
+    "tverskaya street": {
+        "Cost": 220
+    },
+    "ujazdow avenue": {
+        "Cost": 150
+    },
+    "ulleval haveby": {
+        "Cost": 230
+    },
+    "unaka avenue": {
+        "Cost": 150
+    },
+    "union street": {
+        "Cost": 20
+    },
+    "unter den linden": {
+        "Cost": 340
+    },
+    "ute cab company": {
+        "Cost": 300
+    },
+    "vankovica street": {
+        "Cost": 120
+    },
+    "ventnor avenue": {
+        "Cost": 260
+    },
+    "ventura boulevard": {
+        "Cost": 480
+    },
+    "vermont avenue": {
+        "Cost": 100
+    },
+    "via dei condotti": {
+        "Cost": 180
+    },
+    "via del corso": {
+        "Cost": 140
+    },
+    "via sacra": {
+        "Cost": 140
+    },
+    "virginia avenue": {
+        "Cost": 160
+    },
+    "wacker drive": {
+        "Cost": 300
+    },
+    "wall street": {
+        "Cost": 500
+    },
+    "walnut street": {
+        "Cost": 420
+    },
+    "wataga avenue": {
+        "Cost": 150
+    },
+    "water works": {
+        "Cost": 150
+    },
+    "west jersey railroad": {
+        "Cost": 200
+    },
+    "west temple": {
+        "Cost": 330
+    },
+    "westheimer road": {
+        "Cost": 150
+    },
+    "williamstown railroad": {
+        "Cost": 200
+    },
+    "wolska street": {
+        "Cost": 120
+    },
+    "woodward avenue": {
+        "Cost": 30
+    },
+    "yellow cab company": {
+        "Cost": 300
+    },
+    "yellow monorail": {
+        "Cost": 600
+    },
+    "zhasminovaya street": {
+        "Cost": 130
+    }
+}

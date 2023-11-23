@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from 'src/app/models/card';
 import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-monopoly',
@@ -9,12 +10,11 @@ import { environment } from 'src/environments/environment';
 })
 export class MonopolyComponent implements OnInit {
   Math = Math;
-  allCardsNames: string[];
   ownedCards: Card[] = new Array();
   allCards: Card[] = [];
   filteredCards: Card[] = [];
   lastSearch: string = "";
-
+  dataLoaded: boolean = false;
 
   mortagedWorth: number = 0;
   unmortagedWorth: number = 0;
@@ -24,24 +24,42 @@ export class MonopolyComponent implements OnInit {
   currentMortaged: number = 0;
   currentUnmortaged: number = 0;
 
-  constructor() {
-    this.allCardsNames = environment.allCardNames;
-    this.allCardsNames.forEach(cardName => {
-      var newCard = new Card();
-      newCard.name = cardName;
-      newCard.imageUrl = "/assets/Monopoly/" + cardName;
-      newCard.mortaged = false;
-      newCard.worth = 10 * 100;
-      newCard.color = "green";
-      this.allCards.push(newCard);
+  constructor(private http: HttpClient) { }
 
+  ngOnInit() {
+
+    var rawCards: { [key: string]: { Cost: number } };
+    this.http.get('/assets/CardMetadata.json').subscribe((res: any) => {
+      rawCards = res;
+      Object.keys(rawCards).forEach((key: string) => {
+        var rawCard = rawCards[key];
+        console.log(rawCard);
+        var newCard = new Card();
+        newCard.name = key;
+        newCard.imageUrl = "/assets/Monopoly/" + key;
+        newCard.mortaged = false;
+        newCard.worth = rawCard.Cost;
+        newCard.color = "green";
+        this.allCards.push(newCard);
+
+        this.dataLoaded = true;
+      });
+      this.filterCards();
+      this.loadData();
+      this.recalculateCards();
     });
-    this.filterCards();
-    this.ownedCards = JSON.parse(localStorage.getItem('currentHand') ?? '[]');
-    this.recalculateCards();
   }
 
-  ngOnInit(): void {
+
+  loadData() {
+    var data = JSON.parse(localStorage.getItem('currentHand') ?? '[]') as Card[];
+    data.forEach(card => {
+      var cardName = card.name;
+      console.log(cardName + " loading from save");
+      // Why by name? Because metadata may change and want to reload it in this poor loading system
+      this.selectCardByName(cardName);
+
+    })
   }
 
 
@@ -83,6 +101,18 @@ export class MonopolyComponent implements OnInit {
   }
 
   selectCard(card: Card) {
+    card.mortaged = false;
+    this.ownedCards.push(card);
+    this.lastSearch = "";
+    this.filterCards();
+    this.recalculateCards();
+
+    this.saveCurrentHand();
+  }
+
+
+  selectCardByName(name: string) {
+    var card = this.allCards.filter(card => card.name.toLowerCase() == name.toLowerCase())[0];
     card.mortaged = false;
     this.ownedCards.push(card);
     this.lastSearch = "";
