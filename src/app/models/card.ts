@@ -2,6 +2,6 @@ export class Card {
     name!: string;
     imageUrl!: string;
     worth!: number;
-    mortaged!: boolean;
+    mortgaged!: boolean;
     color!: string;
 }

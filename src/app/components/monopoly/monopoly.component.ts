@@ -16,13 +16,13 @@ export class MonopolyComponent implements OnInit {
   lastSearch: string = "";
   dataLoaded: boolean = false;
 
-  mortagedWorth: number = 0;
-  unmortagedWorth: number = 0;
+  mortgagedWorth: number = 0;
+  unmortgagedWorth: number = 0;
   totalRawWorth: number = 0;
-  totalMortaged: number = 0;
+  totalmortgaged: number = 0;
   currentWorth: number = 0;
-  currentMortaged: number = 0;
-  currentUnmortaged: number = 0;
+  currentmortgaged: number = 0;
+  currentUnmortgaged: number = 0;
 
   constructor(private http: HttpClient) { }
 
@@ -37,7 +37,7 @@ export class MonopolyComponent implements OnInit {
         var newCard = new Card();
         newCard.name = key;
         newCard.imageUrl = "/assets/Monopoly/" + key;
-        newCard.mortaged = false;
+        newCard.mortgaged = false;
         newCard.worth = rawCard.Cost;
         newCard.color = "green";
         this.allCards.push(newCard);
@@ -57,16 +57,15 @@ export class MonopolyComponent implements OnInit {
       var cardName = card.name;
       console.log(cardName + " loading from save");
       // Why by name? Because metadata may change and want to reload it in this poor loading system
-      this.selectCardByName(cardName);
+      this.selectCardByName(cardName, card.mortgaged);
 
     })
   }
 
-
-  getWorth(mortagedOnly: boolean): number {
+  getWorth(mortgagedOnly: boolean): number {
     var totalWorth = 0;
     this.ownedCards.forEach(card => {
-      if (mortagedOnly) {
+      if (mortgagedOnly) {
         totalWorth += card.worth / 2;
       }
       else {
@@ -79,7 +78,7 @@ export class MonopolyComponent implements OnInit {
   getCurrentWorth(): number {
     var totalWorth = 0;
     this.ownedCards.forEach(card => {
-      if (card.mortaged) {
+      if (card.mortgaged) {
         totalWorth += card.worth / 2;
       }
       else {
@@ -101,7 +100,7 @@ export class MonopolyComponent implements OnInit {
   }
 
   selectCard(card: Card) {
-    card.mortaged = false;
+    card.mortgaged = false;
     this.ownedCards.push(card);
     this.lastSearch = "";
     this.filterCards();
@@ -111,9 +110,9 @@ export class MonopolyComponent implements OnInit {
   }
 
 
-  selectCardByName(name: string) {
+  selectCardByName(name: string, mortgaged: boolean = false) {
     var card = this.allCards.filter(card => card.name.toLowerCase() == name.toLowerCase())[0];
-    card.mortaged = false;
+    card.mortgaged = mortgaged;
     this.ownedCards.push(card);
     this.lastSearch = "";
     this.filterCards();
@@ -147,9 +146,9 @@ export class MonopolyComponent implements OnInit {
 
   recalculateCards(): void {
     console.log("recalculating")
-    this.totalMortaged = this.ownedCards.filter(card => card.mortaged).length;
-    this.unmortagedWorth = this.getWorth(false);
-    this.mortagedWorth = this.getWorth(true);
+    this.totalmortgaged = this.ownedCards.filter(card => card.mortgaged).length;
+    this.unmortgagedWorth = this.getWorth(false);
+    this.mortgagedWorth = this.getWorth(true);
 
     var total = 0;
     this.ownedCards.forEach(card => {
@@ -157,32 +156,32 @@ export class MonopolyComponent implements OnInit {
     });
     this.totalRawWorth = total;
     this.currentWorth = this.getCurrentWorth();
-    this.currentMortaged = this.getCurrentMortagedWorth();
-    this.currentUnmortaged = this.getCurrentUnmortagedWorth();
+    this.currentmortgaged = this.getCurrentmortgagedWorth();
+    this.currentUnmortgaged = this.getCurrentUnmortgagedWorth();
   }
 
-  getCurrentMortagedWorth(): number {
+  getCurrentmortgagedWorth(): number {
     var totalWorth = 0;
     this.ownedCards.forEach(card => {
-      if (card.mortaged) {
+      if (card.mortgaged) {
         totalWorth += card.worth / 2;
       }
     });
     return totalWorth;
   }
 
-  getCurrentUnmortagedWorth(): number {
+  getCurrentUnmortgagedWorth(): number {
     var totalWorth = 0;
     this.ownedCards.forEach(card => {
-      if (!card.mortaged) {
+      if (!card.mortgaged) {
         totalWorth += card.worth;
       }
     });
     return totalWorth;
   }
 
-  toggleMortageCard(card: Card): void {
-    card.mortaged = !card.mortaged;
+  togglemortgageCard(card: Card): void {
+    card.mortgaged = !card.mortgaged;
     this.recalculateCards();
     this.saveCurrentHand();
   }

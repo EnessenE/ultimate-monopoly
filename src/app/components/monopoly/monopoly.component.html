@@ -4,13 +4,13 @@
             <p>{{ownedCards.length}} cards owned</p>
         </div>
         <div class="col-6">
-            <p>Mortaged: {{totalMortaged}}</p>
+            <p>mortgaged: {{totalmortgaged}}</p>
         </div>
         <div class="col-6">
-            <p>Unmortaged worth ${{unmortagedWorth}}</p>
+            <p>Unmortgaged worth ${{unmortgagedWorth}}</p>
         </div>
         <div class="col-6">
-            <p>Mortaged worth ${{mortagedWorth}}</p>
+            <p>mortgaged worth ${{mortgagedWorth}}</p>
         </div>
         <div class="col-6">
             <p>Raw worth ${{totalRawWorth}}</p>
@@ -18,9 +18,9 @@
         </div>
         <div class="col-6">
             <p>Current worth: ${{currentWorth}}</p>
-            <p>{{(Math.round((currentUnmortaged / currentWorth) * 100) * 100) / 100}}% unmortaged
-                ${{currentUnmortaged}}, {{(Math.round((currentMortaged / currentWorth) * 100) * 100) / 100}}% mortaged
-                ${{currentMortaged}}</p>
+            <p>{{(Math.round((currentUnmortgaged / currentWorth) * 100) * 100) / 100}}% unmortgaged
+                ${{currentUnmortgaged}}, {{(Math.round((currentmortgaged / currentWorth) * 100) * 100) / 100}}% mortgaged
+                ${{currentmortgaged}}</p>
         </div>
         <div *ngFor="let card of ownedCards; let i = index" class="col-6 col-sm-6 col-lg-4 col-xl-3 card">
             <div class="container">
@@ -28,10 +28,10 @@
                 <div class="row">
                     <div class="col-12">
 
-                        <ng-template [ngIf]="!card.mortaged" [ngIfElse]="mortagedCard">
+                        <ng-template [ngIf]="!card.mortgaged" [ngIfElse]="mortgagedCard">
                             <img src="{{card.imageUrl}}_front.png" class="card rounded" alt="...">
                         </ng-template>
-                        <ng-template #mortagedCard>
+                        <ng-template #mortgagedCard>
                             <img src="{{card.imageUrl}}_back.png" class="card rounded" alt="...">
                         </ng-template>
 
@@ -42,20 +42,20 @@
                         <p class="text-wrap"><b>{{card.name}}</b></p>
                     </div>
                     <div class="col-12 col-sm-4">
-                        <ng-template [ngIf]="!card.mortaged" [ngIfElse]="mortageCost">
+                        <ng-template [ngIf]="!card.mortgaged" [ngIfElse]="mortgageCost">
                             <p>${{card.worth}}</p>
                         </ng-template>
-                        <ng-template #mortageCost>
+                        <ng-template #mortgageCost>
                             <p class="text-danger text-wrap">${{card.worth / 2}}</p>
                         </ng-template>
                     </div>
                     <button (click)="deleteCard(card)" class="btn btn-danger delete col-2">x</button>
-                    <ng-template [ngIf]="!card.mortaged" [ngIfElse]="mortageButton">
-                        <button (click)="toggleMortageCard(card)" class="btn btn-danger delete col-10">Mortage</button>
+                    <ng-template [ngIf]="!card.mortgaged" [ngIfElse]="mortgageButton">
+                        <button (click)="togglemortgageCard(card)" class="btn btn-danger delete col-10">mortgage</button>
                     </ng-template>
-                    <ng-template #mortageButton>
-                        <button (click)="toggleMortageCard(card)"
-                            class="btn btn-success delete col-10 text-truncate">Unmortage</button>
+                    <ng-template #mortgageButton>
+                        <button (click)="togglemortgageCard(card)"
+                            class="btn btn-success delete col-10 text-truncate">Unmortgage</button>
                     </ng-template>
                 </div>
             </div>
